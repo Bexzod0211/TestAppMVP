@@ -1,0 +1,631 @@
+<resources>
+    <string name="app_name">Dastulash tillaridan test</string>
+
+    <string-array name="java_questions">
+        <item> Ushbu bo\'lish amalini bajargandan so\'ng, x o\'zgaruvchisida qanday qiymat bo\'ladi?\n
+double x = 10/4;</item>
+        <item>Binar amalda nechta operand ishtirok etadi?</item>
+        <item>Bitta operand ustida bajariladigan amallar nima deyiladi?</item>
+        <item>Ushbu kodni bajarish natijasida a o\'zgaruvchisi qanday qiymatga ega bo\'ladi?\n
+int a,b;\n
+b = 2;\n
+a = ++b;\n</item>
+        <item> O‘zgaruvchining qiymatini bittaga oshiruvchi o‘stirish operatori qanday nomlanadi?</item>
+        <item>Massivning barcha elementlarida qanday umumiylik bor?</item>
+        <item> Java-da qanday matematik amallar mavjud?</item>
+        <item>Funksiya nechta parametr olishi mumkin?</item>
+        <item>Qaysi qatorda to\'g\'ri kod keltirilgan</item>
+        <item>Ko\'p o\'lchovli massivga yangi qiymat qayerda to\'g\'ri berilgan?</item>
+        <item>Bu yerda nima noto\'g\'ri?\n
+int a, b;\n
+System.out.print("Birinchi raqamni kiriting: ");\n
+Scanner num = new Scanner(System.in);\n
+a = num.nextFloat();</item>
+        <item>Massiv qayerda to\'g\'ri yaratilgan?</item>
+        <item>Har bir fayl … nomi bilan nomlanishi kerak</item>
+        <item>int a = 9;\n
+switch (a) {\n
+     case 0: System.out.print("0");\n
+     case 5: System.out.print("5"); break;\n
+     case 9: System.out.print("9");\n
+     case 10: System.out.print("10"); break;\n
+     default: System.out.print("!");\n
+}</item>
+        <item>Kodni kompilyatsiya qilish va dasturni argumentlarsiz ishga tushirishdan keyin nima sodir bo\'ladi:\n
+        public class Main {\n
+        public static void main(String[] args) {\n
+        System.out.println(args.length);\n
+        }\n
+}</item>
+        <item>Java-da ob\'ektni qanday yo\'q qilish mumkin?</item>
+        <item> Quyidagi kod mavjud:\n
+        public class Overload{\n
+  public void method(Object o) {\n
+    System.out.println("Object");\n
+  }\n
+  public void method(java.io.FileNotFoundException f) {\n
+    System.out.println("FileNotFoundException");\n
+  }\n
+  public void method(java.io.IOException i) {\n
+    System.out.println("IOException");\n
+  }\n
+  public static void main(String args[]) {\n
+    Overload test = new Overload();\n
+    test.method(null);\n
+  }\n
+}\n
+        Uni tuzish va bajarish natijasi quyidagicha bo\'ladi:</item>
+        <item>Float f1 = new Float(Float.NaN);\n
+        Float f2 = new Float(Float.NaN);\n
+        System.out.println( ""+ (f1 == f2)+" "+f1.equals(f2)+ " "+(Float.NaN == Float.NaN) );\n
+        Ushbu kod qismini bajarish natijasida nima chiqariladi:</item>
+        <item>class Mountain {\n
+  static String name = "Himalaya";\n
+  static Mountain getMountain() {\n
+    System.out.println("Getting Name ");\n
+    return null;\n
+  }\n
+  public static void main(String[ ] args) {\n
+    System.out.println( getMountain().name );\n
+  }\n
+}\n
+        Ushbu kodni ishga tushirishga harakat qilganingizda nima bo\'ladi:</item>
+        <item>Integer a = 120;\n
+Integer b = 120;\n
+Integer c = 130;\n
+Integer d = 130;\n
+System.out.println(a==b);\n
+System.out.println(c==d);\n
+        Ushbu kodni bajarish natijasida siz quyidagilarni ko\'rasiz:</item>
+        <item> //In File Other.java\n
+package other;\n
+public class Other { public static String hello = "Hello"; }\n
+
+//In File Test.java\n
+package testPackage;\n
+import other.*;\n
+class Test{\n
+  public static void main(String[] args) {\n
+    String hello = "Hello", lo = "lo";\n
+    System.out.print((testPackage.Other.hello == hello) + " ");\n
+    System.out.print((other.Other.hello == hello) + " ");\n
+    System.out.print((hello == ("Hel"+"lo")) + " ");\n
+    System.out.print((hello == ("Hel"+lo)) + " ");\n
+    System.out.println(hello == ("Hel"+lo).intern());\n
+  }\n
+}\n
+class Other { static String hello = "Hello"; }\n
+
+        Natijada biz quyidagilarni olamiz:</item>
+        <item> public class Main {\n
+  static void method(int… a) {\n
+    System.out.println("inside int…");\n
+  }\n
+  static void method(long a, long b) {\n
+    System.out.println("inside long");\n
+  }\n
+  static void method(Integer a, Integer b) {\n
+    System.out.println("inside INTEGER");\n
+  }\n
+  public static void main(String[] args) {\n
+    int a = 2;\n
+    int b = 3;\n
+    method(a,b);\n
+  }\n
+}\n
+
+        Kod natijasi quyidagicha bo\'ladi:</item>
+        <item>class Super { \nstatic String ID = "QBANK"; \n}
+class Sub extends Super{\n
+  static \n{\n System.out.print("In Sub"); \n}\n
+}\n
+class Test {\n
+  public static void main(String[] args) {\n
+    System.out.println(Sub.ID);\n
+     }\n
+}\n
+        Quyidgai kod natija shunday bo\'ladi:</item>
+        <item> Ikkita klass mavjud bo\'lib\n
+        //in file A.java\n
+package p1;\n
+public class A{\n
+  protected int i = 10;\n
+  public int getI() { return i; }\n
+}\n
+
+//in file B.java\n
+package p2;\n
+import p1.*;\n
+public class B extends A{\n
+  public void process(A a) {\n
+    a.i = a.i*2;\n
+  }\n
+  public static void main(String[] args) {\n
+    A a = new B();\n
+    B b = new B();\n
+    b.process(a);\n
+    System.out.println( a.getI() );\n
+  }\n
+}\n
+       B sinfini bajarish natijasida biz quyidagi natija olamiz:</item>
+        <item>OOP nima?</item>
+        <item>Java tilida sinf nima?</item>
+        <item> Kodda sinfni qanday e\'lon qilish kerak?</item>
+        <item>New operatori nima uchun ishlatiladi?</item>
+        <item><b>extends</b> kalit so\'zi nimani anglatadi?</item>
+        <item>Java-da metod overloading nima?</item>
+        <item>Java tilida metod override nima degani</item>
+        <item>Class ning oddiy va static metodlari farqi nimada</item>
+        <item>Static metodi oddiy metodini ichida qandey chaqiriladi?</item>
+        <item>Oddiy metod static metod ichida qandey chaqiriladi?</item>
+        <item>Quyidagicha e\'lon qilingan metod nima qaytaradi:\n
+public static int getAmount()</item>
+        <item>Quyidagi kod natijasi nima bo\'ladi:\n
+     public static void main(String[] args) {\n
+int a = 5;\n
+System.out.println(a + "2");\n
+}</item>
+        <item>Quyidagi kod natijasi nima qaytaradi\n
+        public static void main(String[] args) {\n
+  int z = 0;\n
+  int number = 452;\n
+  while (number > 0) {\n
+   z += number % 10;\n
+   number /= 10;\n
+  }\n
+System.out.println(z);\n
+}</item>
+        <item>Quyidagi kod natijasi nima bo\'ladi?\n
+        public static void main(String[] args) {\n
+  String s = "Hello";\n
+  System.out.println(s + 5 + 4);\n
+}</item>
+        <item> Quyidagi kod natijasi nima bo\'ladi?\n
+        public static void main(String[] args) {\n
+  String test = new String("Hello");\n
+  String test2 = new String("Hello");\n
+  System.out.println(test==test2);\n
+}</item>
+        <item>Quyidagi kod natijasi nima bo\'ladi\n
+        class Nullable {\n
+    public static String hello() {\n
+        return "Hello!";\n
+    }\n
+}\n
+
+public class Test {\n
+    public static void main(String[] args) {\n
+        Nullable nullable = null;\n
+        System.out.println(nullable.hello());\n
+    }\n
+}\n
+        </item>
+
+    </string-array>
+
+
+    <string-array name="java_answers">
+        <item>2</item>
+        <item>2</item>
+        <item>Unar</item>
+        <item>3</item>
+        <item>Inkrement</item>
+        <item>Ularning ma\'lumotlar turi</item>
+        <item>Barcha javoblar to\'g\'ri</item>
+        <item>Cheksiz miqdor</item>
+        <item>System.out.print("Hello World!");</item>
+        <item>a[0][0] = 1;</item>
+        <item>NextFloat o\'rniga nextInt dan foydalanish kerak</item>
+        <item>int[] a = new int[] {1, 2, 3, 4, 5};</item>
+        <item>undagi public sinf nomi bilan</item>
+        <item>910</item>
+        <item>Kod kompilyatsiya qilinadi va "0" raqami konsolda chop etiladi</item>
+        <item>buni qo\'lda qilish mumkin emas</item>
+        <item>«FileNotFoundException»</item>
+        <item>false true false</item>
+        <item>Getting Name" va "Himalaya" chop etiladi</item>
+        <item>true false</item>
+        <item>true true true false true</item>
+        <item>«inside long»</item>
+        <item>"QBANK" chiqadi konsolga</item>
+        <item>Kod kompilatsiya bo\'lmaydi</item>
+        <item>Ob\'ektga yo\'naltirilgan dasturlash - bu dasturni ob\'ektlar to\'plami sifatida ko\'rsatishga asoslangan dasturlash metodologiyasi, ularning har biri ma\'lum bir sinfning namunasi va sinflar meros ierarxiyasini tashkil qiladi.</item>
+        <item>Java tilida ob\'ektga yo\'naltirilgan dasturlashning asosiy elementi.</item>
+        <item>class MyClass {}</item>
+        <item>Sinf namunasini yaratish uchun.</item>
+        <item>Bu sinf boshqasidan meros olayotganilgini</item>
+        <item>Bir hil nomga ega, ammo turli xil parametrlar to\'plamiga ega bo\'lgan bir nechta metodlar.</item>
+        <item>Ota klass tarkibidagi metodni o\'zgartirish</item>
+        <item>Oddiy metod klass obyektiga bog\'liq bo\'ladi, static metod esa klassga</item>
+        <item>Shundey chaqiriladi</item>
+        <item>Chaqirib bo\'lmaydi,static metod sinf obyektu bilan ishlamaydi</item>
+        <item>butun toifali qiymat qaytaradi</item>
+        <item>52</item>
+        <item>sonning raqamlar yig\'indisini qaytaradi</item>
+        <item>Hello54</item>
+        <item>false</item>
+        <item>"Hello" yozuvi chiqadi konsolga</item>
+    </string-array>
+
+
+    <string-array name="java_variant_a">
+        <item>2.5</item>
+        <item>1</item>
+        <item>Unar</item>
+        <item>2</item>
+        <item>Dekrement</item>
+        <item>Ularning o\'lchami</item>
+        <item>+, -, *, /, --, ++</item>
+        <item>3 dan ortiq emas</item>
+        <item>print("Hello World!");</item>
+        <item>a(0)(0) = 1;</item>
+        <item>Xatolar yoʻq</item>
+        <item>int a = new int[] {1, 2, 3, 4, 5};</item>
+        <item>xohlaganingdek</item>
+        <item>910</item>
+        <item>Kod kompilyatsiya qilinmaydi</item>
+        <item>barcha ob\'ekt ssilkaliga null belgilash kerak</item>
+        <item>Kompilyatsiyada xatolik</item>
+        <item>false false false</item>
+        <item>U "Himalaya" ni chop etadi, lekin "Getting Name" chop etilmadydi</item>
+        <item>true true</item>
+        <item>false true true false true</item>
+        <item>Kompilatsiyada xatolik</item>
+        <item>U hatto kompilyatsiya bo\'lmaydi</item>
+        <item>konsolga 20 chiqadi</item>
+        <item>Ob\'ektga yo\'naltirilgan dasturlash - bu dasturni ob\'ektlar to\'plami sifatida ko\'rsatishga asoslangan dasturlash metodologiyasi, ularning har biri ma\'lum bir sinfning namunasi va sinflar meros ierarxiyasini tashkil qiladi.</item>
+        <item>Dasturning murakkablik darajasi. Barcha operatorlar foydalanishning murakkabligiga qarab sinflarga bo\'linadi.</item>
+        <item>class MyClass {}</item>
+        <item>Yangi o\'zgaruvchini yaratish uchun.</item>
+        <item>Bu sinf boshqasidan meros olayotganilgini</item>
+        <item>Ota klass metodiga o\'zgartirish kiritish</item>
+        <item>Ota klass tarkibidagi metodni o\'zgartirish</item>
+        <item>Oddiy metodni bola klassda o\'zgartirish kiritisa bo\'ladi</item>
+        <item>Hech qanday holatda, static metodini faqat sinf ob\'ektidan chaqirilishi mumkin.</item>
+        <item>Chaqirib bo\'lmaydi,static metod sinf obyektu bilan ishlamaydi</item>
+        <item>metod ta\'nasiga bo\'g\'liq</item>
+        <item>7</item>
+        <item>sonning raqamlar yig\'indisini qaytaradi</item>
+        <item>Hello54</item>
+        <item>true</item>
+        <item>"Hello" yozuvi chiqadi konsolga</item>
+
+    </string-array>
+
+    <string-array name="java_variant_b">
+        <item>2</item>
+        <item>2</item>
+        <item>Binar</item>
+        <item>3</item>
+        <item>Inkrement</item>
+        <item>Ularning ismlari</item>
+        <item>+, -, *, /, %</item>
+        <item>20 dan oshmasligi kerak</item>
+        <item>System.out("Hello World!");</item>
+        <item>a[0 0] = 1;</item>
+        <item>System.in o\'rniga System.out dan foydalanish kerak</item>
+        <item>int[] a = new int {1, 2, 3, 4, 5};</item>
+        <item>undagi asosiy metod nomi bilan</item>
+        <item>9</item>
+        <item>Kod kompilyatsiya qilinadi, lekin ish vaqtida NullPointerException chiqariladi</item>
+        <item>Runtime.getRuntime().gc() ni chaqirish</item>
+        <item>Ish vaqti xatosi</item>
+        <item>false true false</item>
+        <item>"Getting Name" va "Himalaya" chop etiladi</item>
+        <item>false false</item>
+        <item>false false true false true</item>
+        <item>«inside int...»</item>
+        <item>Natija JVMni amalga oshirishga bog\'liq</item>
+        <item>Konsolga 10 chiqadi</item>
+        <item>Ob\'ektga yo\'naltirilgan dasturlash - bu yuqori darajadagi tushunchalardan foydalanadigan va Assemblerdan farqli o\'laroq, to\'g\'ridan-to\'g\'ri shaxsiy kompyuter xotira kataklari bilan ishlamaydigan har qanday turdagi dasturlashning nomi.</item>
+        <item>Java tilida ob\'ektga yo\'naltirilgan dasturlashning asosiy elementi.</item>
+        <item>new class MyClass {}</item>
+        <item>Yangi sinfni e\'lon qilish uchun.</item>
+        <item>Bu uning xususiyatlarini kengaytiradigan qo\'shimcha sinf moduli.</item>
+        <item>Bolas klass metodgia o\'zgartirish kiritish</item>
+        <item>Bola klass tarkibidagi metodni o\'zgartirish</item>
+        <item>Oddiy metodni override qilib bo\'ladi, lekin static metodni bo\'lmaydi</item>
+        <item>Overload qilish bilan</item>
+        <item>o\'sha metodni overload qilish bilan</item>
+        <item>classning static maydonini qaytaradi</item>
+        <item>unhandled exception</item>
+        <item>sonning raqamlar sonini qaytaradi</item>
+        <item>Hello 5 4</item>
+        <item>null</item>
+        <item>NullPointerException</item>
+    </string-array>
+
+    <string-array name="java_variant_c">
+        <item>3</item>
+        <item>3</item>
+        <item>Unit</item>
+        <item>5</item>
+        <item>Shift right</item>
+        <item>Ularning ma\'lumotlar turi</item>
+        <item>Barcha javoblar to\'g\'ri</item>
+        <item>10 dan ortiq emas</item>
+        <item>System.out.print = "Hello World!";</item>
+        <item>a[0, 0] = 1;</item>
+        <item>int a, b - alohida yozilishi kerak</item>
+        <item>int a[] = 1, 2, 3, 4, 5;</item>
+        <item>undagi public sinf nomi bilan</item>
+        <item>10</item>
+        <item>Kod kompilyatsiya qilinadi va "0" raqami konsolda chop etiladi</item>
+        <item>ob\'ektda finalize() usulini chaqirish zarur</item>
+        <item>«Object»</item>
+        <item>true true false</item>
+        <item>Hech narsa chiqmaydi</item>
+        <item>false true</item>
+        <item>true true true true true</item>
+        <item>«inside long»</item>
+        <item>"QBANK" chiqadi konsolga</item>
+        <item>Kod kompilatsiya bo\'lmaydi</item>
+        <item>Ob\'ektga yo\'naltirilgan dasturlash shunchaki go\'zal tushunchadir. Agar siz o\'ylab ko\'rsangiz, u qo\'shimcha semantik yukni ko\'tarmaydi, shunchaki dasturchilar qisqartmalarni yaxshi ko\'radilar, shuning uchun ularning mutaxassislik sohalari murakkabroq ko\'rinadi.</item>
+        <item>O\'zgaruvchilarni nomi</item>
+        <item>select * from class MyClass {}</item>
+        <item>Sinf namunasini yaratish uchun.</item>
+        <item>Ikki sinf xuddi bir hil narsani qiladi.</item>
+        <item>Bir hil nomga ega, ammo turli xil parametrlar to\'plamiga ega bo\'lgan bir nechta metodlar.</item>
+        <item>Bir hil metodiga ega bo\'lgan bir nechta klass</item>
+        <item>Oddiy metod klass obyektiga bog\'liq bo\'ladi, static metod esa klassga</item>
+        <item>Override qilish bilan</item>
+        <item>o\'sha metodni override qilish bilan</item>
+        <item>this classining obyektini referencini qaytaradi</item>
+        <item>52</item>
+        <item>sonning raqamlarini 10 bo\'lgandagi qoldig\'ini yig\'indisini qaytaradi</item>
+        <item>Hello9</item>
+        <item>Hello</item>
+        <item>Kod xatosiz ishlaydi, lekin konsolga hech nima chiqmaydi</item>
+    </string-array>
+
+
+    <string-array name="java_variant_d">
+        <item>To\'g\'ri javob keltirilmagan</item>
+        <item>4</item>
+        <item>Birlamchi</item>
+        <item>Xatolik qaytadi</item>
+        <item>To\'g\'ri javob keltirilmagan</item>
+        <item>Ularning xotira manzili</item>
+        <item>+, -, *, /</item>
+        <item>Cheksiz miqdor</item>
+        <item>System.out.print("Hello World!");</item>
+        <item>a[0][0] = 1;</item>
+        <item>NextFloat o\'rniga nextInt dan foydalanish kerak</item>
+        <item>int[] a = int[] {1, 2, 3, 4, 5};</item>
+        <item>paket nomi bo\'yicha</item>
+        <item>Kodda xato</item>
+        <item>Kod kompilyatsiya qilinadi, lekin konsolga hech narsa chop etmaydi</item>
+        <item>buni qo\'lda qilish mumkin emas</item>
+        <item>«FileNotFoundException»</item>
+        <item>false true true</item>
+        <item>NullPointerException qaytadi</item>
+        <item>true false</item>
+        <item>true true true false true</item>
+        <item>ish vaqti xatosi</item>
+        <item>"In Sub" va "QBANK" chiqadi</item>
+        <item>30 chiqadi konsolga</item>
+        <item>Juda yolg\'iz dasturchi.</item>
+        <item>Bunday tushuncha faqat C++ da mavjud, Javada esa bunday tushuncha yo\'q.</item>
+        <item>class MyClass() {}</item>
+        <item>Bu OLD operatorining antagonistidir.</item>
+        <item>Bu dasturdagi eng katta sinf.</item>
+        <item>Bir hil metodiga ega bo\'lgan bir nechta klass</item>
+        <item>Bir hil nomga ega, ammo turli xil parametrlar to\'plamiga ega bo\'lgan bir nechta metodlar.</item>
+        <item>Static metodini faqat o\'sha klass ichida chaqirib ishlatishiz mumkin, a oddiy klassni esa har qandey joyda ham chaqirib ishlatsek bo\'ladi</item>
+        <item>Shundey chaqiriladi</item>
+        <item>hech qandey yangilik kiritmasdan shundey chaqirilaveradi</item>
+        <item>butun toifali qiymat qaytaradi</item>
+        <item>5+2</item>
+        <item>Sonning teskari tartibda qaytaradi</item>
+        <item>Hello 54</item>
+        <item>false</item>
+        <item>Kompilyatsiya vaqtida xato qaytadi</item>
+
+    </string-array>
+
+
+    <string-array name="javascript_questions">
+        <item>Ushbu misolning natijasi qanday?\n
+        function f() {\n
+  let a = 5;\n
+  return new Function(\'b\', \'return a + b\');\n
+}\n
+\n
+alert( f()(1) );</item>
+        <item>Quyidagi kod natijasi nima bo\'ladi\n a == b?\n
+        a = [1, 2, 3];\n
+b = [1, 2, 3];</item>
+        <item>X shunday qiymat bormiki, a = X bo\'lganidan so\'ng, (a == X) alert chaqiruvi noto\'g\'ri bo\'lishi kerak\n
+        let a = X;\n
+alert( a == X ); // false</item>
+        <item>JavaScript qayerda ishlatilinishi mumkin?</item>
+        <item>Qaysi o\'zgaruvchi noto\'g\'ri yozilgan?\n</item>
+        <item>Qalqib chiquvchi oynaning ishga tushirilishi qayerda to\'g\'ri ko\'rsatilgan?</item>
+        <item>O\'zgaruvchilarda qanday qiymatlarni saqlash mumkin?</item>
+        <item>confirm va prompt o\'rtasidagi farq nimada?</item>
+        <item>O\'zgaruvchi qaysi qatorda to\'g\'ri kiritilgan</item>
+        <item>"Hello World!" xabarini JavaScipt tilida qandey ko\'rsatish mumkin?</item>
+        <item>JavaScript-da funktsiyani qanday e\'lon qilish mumkin?</item>
+        <item>JavaScript-da IF iborasidan foydalanishning to\'g\'ri yo\'li qanday?</item>
+        <item>Yangi massivni JavaScriptda qandey yaratish mumkin?</item>
+        <item>Shablon qatori uchun to\'g\'ri sintaksis qanday?</item>
+        <item>Quyidagi kod qandey natija qaytaradi?\n
+        let squares = [2, 4, 6].map(x => x * x);\n
+        [a, b] = squares;\n
+        console.log(a + b);</item>
+        <item>Dokumentdan  id bo\'yicha elementni qanday olish mumkin?</item>
+        <item>O‘zgaruvchiga qiymat berish uchun qaysi operatordan foydalaniladi?</item>
+        <item>Quyidagi kod natijasi nima chiqadi?\n
+        console.log(employeeId);\n
+        var employeeId = \'19000\';</item>
+        <item>Consolega nima chiqadi?\n
+        class Something {}\n
+        \n
+        console.log(typeof Something)</item>
+        <item>Bu kod nima chiqaradi?</item>
+        <item>=== operatori nima qiladi?</item>
+        <item>Bu kod nima chiqaradi?\n
+        alert( "1"[0] );</item>
+        <item>JavaScript tilining birinchi versiyasi bo\'lgan LiveScript-ni ishlab chiqish uchun necha kun kerak bo\'ldi?</item>
+        <item>alert nima chiqaradi?\n
+        alert(str); // ?\n
+var str = "Hello";</item>
+        <item>a + b + c nimaga teng?\n
+        let a = 1;\n
+let b = { toString() {return \'1\'} };\n
+let c = 1;\n</item>
+        <item>Qaysi arifmetik amal javascriptda xatolikka olib keladi?</item>
+
+    </string-array>
+
+    <string-array name="javascript_answers">
+        <item>Xato qaytadi</item>
+        <item>Yolg\'on</item>
+        <item>Xa X boshqa qiymat</item>
+        <item>Yuqoridagilarning barchasida mumkin</item>
+        <item>var number = 12,5;</item>
+        <item>alert ("Hi")</item>
+        <item>Satrlar, haqiqiq sonlar, tub sonlar va mantiqiy ifodalar</item>
+        <item>prompt kiritish maydonga ega dialog chiqaradi, confirm esa tasdiqlash oynasini</item>
+        <item>var num_1;</item>
+        <item>alert("Hello World");</item>
+        <item>function MyFunction()</item>
+        <item>if (i == 2)</item>
+        <item>var colors = ["yellow", "purple", "blue"]</item>
+        <item>Be ${person} - everyone else is already taken</item>
+        <item>20</item>
+        <item>document.getElementById(id)</item>
+        <item>=</item>
+        <item>undefined</item>
+        <item>Function</item>
+        <item>2</item>
+        <item>Turdi inobatga olmay solishtiradi</item>
+        <item>1</item>
+        <item>10</item>
+        <item>undefined</item>
+        <item>111</item>
+        <item>Yuqoridagilardan hech qaysisi</item>
+
+
+    </string-array>
+
+    <string-array name="javascript_variants_a">
+        <item>1</item>
+        <item>Yolg\'on</item>
+        <item>Xa X - undefined</item>
+        <item>Mobil ilovalar</item>
+        <item>var num = "STRING";</item>
+        <item>new alert ("Hi")</item>
+        <item>Satrlar, haqiqiq sonlar, tub sonlar va mantiqiy ifodalar</item>
+        <item>Ular hech qanday farq qilmaydi</item>
+        <item>var num_1;</item>
+        <item>msg("Hello World");</item>
+        <item>function:MyFunction()</item>
+        <item>if i = 2</item>
+        <item>var colors = 1 = ("yellow"), 2 = ("purple"), 3 = ("blue")</item>
+        <item>Be ${person} - everyone else is already taken</item>
+        <item>16</item>
+        <item>document.getElementById(id)</item>
+        <item>+</item>
+        <item>undefined</item>
+        <item>hech narsa chiqarmaydi, xatolik yuz beradi</item>
+        <item>1</item>
+        <item>Kiritilgan ma\'lumotlarning to\'g\'riligini tekshiradi</item>
+        <item>0</item>
+        <item>10</item>
+        <item>Hello</item>
+        <item>11[object Object]</item>
+        <item>Nolga bo\'linish</item>
+
+    </string-array>
+
+    <string-array name="javascript_variants_b">
+        <item>Xato qaytadi</item>
+        <item>Rost</item>
+        <item>Xa X - null</item>
+        <item>Veb ilovalar</item>
+        <item>var number = 12,5;</item>
+        <item>info ("Hi")</item>
+        <item>Faqat raqamlar va satrlar</item>
+        <item>confirm kiritish maydoniga ega dialog chiqaradi, prompt esa tasdiqlash oynasini</item>
+        <item>var 2num;</item>
+        <item>alert("Hello World");</item>
+        <item>function = New MyFunction()</item>
+        <item>if i = 2 then</item>
+        <item>var colors = (1:"yellow", 2:"purple", 3:"blue")</item>
+        <item>Be #{person} - everyone else is already taken</item>
+        <item>20</item>
+        <item>document.getElementsById(id)</item>
+        <item>*</item>
+        <item>ReferenceError: employeeId is not defined</item>
+        <item>undefined</item>
+        <item>2</item>
+        <item>Bunday operator yo\'q</item>
+        <item>1</item>
+        <item>1</item>
+        <item>Xato bo\'ladi</item>
+        <item>2[object Object]</item>
+        <item>Raqamni qatorga ko\'paytirish</item>
+
+    </string-array>
+
+    <string-array name="javascript_variants_c">
+        <item>undefined</item>
+        <item>Kodda xatolik bor</item>
+        <item>Xa X boshqa qiymat</item>
+        <item>Server ilovalari</item>
+        <item>var isDone = 0;</item>
+        <item>alert ("Hi")</item>
+        <item>Satrlar, nuqtali sonlar va tub sonlar</item>
+        <item>To\'g\'ri variant keltirilmagan</item>
+        <item>ver num;</item>
+        <item>msgBox("Hello World");</item>
+        <item>function MyFunction()</item>
+        <item>if i == 2 then</item>
+        <item>var colors = ["yellow", "purple", "blue"]</item>
+        <item>\'Be #{person} - everyone else is already taken\'</item>
+        <item>6</item>
+        <item>getElementById(document, id)</item>
+        <item>-</item>
+        <item>Some Value</item>
+        <item>Object</item>
+        <item>x</item>
+        <item>Turdi inobatga olmay solishtiradi</item>
+        <item>2</item>
+        <item>100</item>
+        <item>undefined</item>
+        <item>111</item>
+        <item>Manfiy sonning ildizi</item>
+
+    </string-array>
+
+    <string-array name="javascript_variants_d">
+        <item>6</item>
+        <item>Exception</item>
+        <item>Yo\'q buni ilojisi yo\'q</item>
+        <item>Yuqoridagilarning barchasida mumkin</item>
+        <item>var b = false;</item>
+        <item>To\'g\'ri variantlar yo\'q</item>
+        <item>Hech qaysi biri</item>
+        <item>prompt kiritish maydonga ega dialog chiqaradi, confirm esa tasdiqlash oynasini</item>
+        <item>var num</item>
+        <item>alertBox("Hello World");</item>
+        <item>function = MyFunction()</item>
+        <item>if (i == 2)</item>
+        <item>var colors = "yellow", "purple", "blue"</item>
+        <item>Be {{person}} - everyone else is already taken</item>
+        <item>4</item>
+        <item>getElementsById(document, id)</item>
+        <item>=</item>
+        <item>TypeError</item>
+        <item>Function</item>
+        <item>у = 2</item>
+        <item>To\'g\'ri variant keltirilmagan</item>
+        <item>undefined</item>
+        <item>1000</item>
+        <item>Exception</item>
+        <item>3</item>
+        <item>Yuqoridagilardan hech qaysisi</item>
+    </string-array>
+
+</resources>

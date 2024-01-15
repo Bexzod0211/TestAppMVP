@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_image"
+    android:gravity="center"
+    tools:context=".ui.catalog.CatalogActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/color_game2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                android:padding="8dp"
+                android:tint="@color/black"
+                android:background="?selectableItemBackground"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Test kataloglari"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:gravity="center"
+                />
+
+
+            <Space
+                android:layout_width="40dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_js"
+            android:layout_width="140dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@id/card_c"
+            app:layout_constraintEnd_toStartOf="@id/card_java"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/line_js"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_game_light"
+                android:foreground="?selectableItemBackground"
+                android:clickable="true"
+                android:elevation="8dp"
+                android:focusable="true"
+                android:orientation="vertical"
+                android:weightSum="1.4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="15dp"
+                    android:src="@drawable/icon_javascript" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text="JavaScript"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_java"
+            android:layout_width="140dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@id/card_python"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_js"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/line_java"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_game_light"
+                android:foreground="?selectableItemBackground"
+                android:clickable="true"
+                android:elevation="8dp"
+                android:focusable="true"
+                android:orientation="vertical"
+                android:weightSum="1.4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="15dp"
+                    android:src="@drawable/icon_java" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text="Java"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_c"
+            android:layout_width="140dp"
+            android:layout_height="170dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/card_python"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_js">
+
+            <LinearLayout
+                android:id="@+id/line_c_sh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:clickable="true"
+                android:elevation="8dp"
+                android:focusable="true"
+                android:orientation="vertical"
+                android:background="@color/color_game_light"
+                android:foreground="?selectableItemBackground"
+                android:weightSum="1.4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="15dp"
+                    android:src="@drawable/icon_c_sh" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text="C#"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_python"
+            android:layout_width="140dp"
+            android:layout_height="170dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_c"
+            app:layout_constraintTop_toBottomOf="@id/card_java">
+
+            <LinearLayout
+                android:id="@+id/line_python"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_game_light"
+                android:foreground="?selectableItemBackground"
+                android:clickable="true"
+                android:elevation="8dp"
+                android:focusable="true"
+                android:orientation="vertical"
+                android:weightSum="1.4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="15dp"
+                    android:src="@drawable/icon_python" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text="Python"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

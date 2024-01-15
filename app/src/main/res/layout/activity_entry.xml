@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_image"
+    android:orientation="vertical"
+    tools:context=".ui.entry.EntryActivity">
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:src="@drawable/img_quiz" />
+
+    <FrameLayout
+        android:id="@+id/frame_start"
+        android:layout_width="240dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_start"
+        android:foreground="?selectableItemBackground">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_play" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/leckerli_one"
+            android:gravity="center"
+
+            android:text="Start"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+<!--        android:fontFamily="@font/leckerli_one"-->
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frame_about"
+        android:layout_width="240dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_start"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_info" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/leckerli_one"
+            android:gravity="center"
+            android:text="About"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frame_exit"
+        android:layout_width="240dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_start"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_exit" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/leckerli_one"
+            android:gravity="center"
+            android:text="Exit"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+    </FrameLayout>
+</LinearLayout>
